@@ -7,6 +7,10 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+/*
+var Parse = require('parse').Parse
+Parse.initialise("dGYjRJzYpBYm6PXSLnbhImTDSybv3aYSiESAQvGB", "4gp9nMDSssiyi2G89mypic1W7b7HGPoYHpmmDrGF");
+*/
 
 var app = express();
 

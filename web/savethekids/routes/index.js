@@ -1,10 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Parse = require('parse/node');
-
-Parse.initialise("dGYjRJzYpBYm6PXSLnbhImTDSybv3aYSiESAQvGB", "4gp9nMDSssiyi2G89mypic1W7b7HGPoYHpmmDrGF");
-
+/*
 Parse.FacebookUtils.init({ // this line replaces FB.init({
   appId      : '1498622890439553', // Facebook App ID
   status     : true,  // check Facebook Login status
@@ -13,7 +10,7 @@ Parse.FacebookUtils.init({ // this line replaces FB.init({
   version    : 'v2.5' // point to the latest Facebook Graph API version
 });
 
-
+*/
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

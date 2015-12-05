@@ -14,12 +14,16 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <% if(!user) { %>
                     <li>
                         <a href="">Sign Up</a>
                     </li>
                     <li>
-                        <a href="">Login</a>
+                        <a href="/login">Login</a>
                     </li>
+                    <% } else { %>
+                    <li> <a href="/logout"> Logout </a> </li>
+                    <% } %>
                     <li>
                         <a class="dropdown-toggle glyphicon glyphicon-menu-hamburger" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         </a>

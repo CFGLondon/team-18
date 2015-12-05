@@ -13,8 +13,11 @@ router.get('/login', function(req, res, next){
   res.render('login', { user: req.user } );
 });
 
-router.get('/signup', function(req, res, next){
+router.get('/matthew', function(req, res, next){
+  res.render('user', { user: req.user } );
+});
 
+router.get('/signup', function(req, res, next){
   res.render('lol', { user: req.user } );
 });
 

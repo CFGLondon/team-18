@@ -181,13 +181,22 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/scuk_logo.png);
+    /*background-image: url(../img/scuk_logo.png);*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: 40%;
     background-repeat: no-repeat;
     -o-background-size: cover;
+}
+
+.profile-header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+
 }
 
 header .header-content {
@@ -245,6 +254,10 @@ header .header-content .header-content-inner p {
 
 .section-heading {
     margin-top: 0;
+}
+
+.profile-heading {
+    padding-top: 2cm;
 }
 
 .service-box {
@@ -479,10 +492,11 @@ body {
     webkit-tap-highlight-color: #222;
 }
 
+/*
 .header-button {
-    padding-bottom: 8cm;
+    padding-bottom: 10cm;
 }
-
+*/
 .centerCol {
     margin: 0 auto;
 }
@@ -492,4 +506,22 @@ div.img-div{
     width:50px;
     overflow:hidden;
     border-radius:50%;
+}
+
+.profile-name { 
+    padding-top: 8cm;
+}
+
+.bio { 
+    padding-top: 2cm;
+}
+
+img.header-logo {
+    height: 500px;
+    width: 510px;
+}
+
+img.screenshot {
+    height: 500px;
+    width: 375px;
 }

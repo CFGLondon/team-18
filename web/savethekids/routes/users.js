@@ -11,11 +11,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/:id', function(req, res, next) {
   User.findOne({uid: req.params.id}, function(err, user){
-
-    if(!err)
-      res.render('user', {userdata: user});
-
+    console.log(user.name);
   });
+  res.redirect('/profile');
 });
 
 module.exports = router;

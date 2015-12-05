@@ -18,6 +18,10 @@ router.get('/signup', function(req, res, next){
   res.render('register', { user: req.user } );
 });
 
+router.get('/profile', function(req, res, next){
+  res.render('profile', { user: req.userdata } );
+});
+
 router.get('/dashboard', ensureAuthenticated, function(req,res,next){
   res.render('dashboard', {user: req.user } );
 });
@@ -25,7 +29,9 @@ router.get('/dashboard', ensureAuthenticated, function(req,res,next){
 router.post('/search', function(req, res, next) {
   User.findOne({name: req.body.search}, function(err, user){
     if(!err)
+    if(user) {
       res.redirect('/users/'+user.uid);
+    }
   });
 });
 

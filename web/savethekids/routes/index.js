@@ -5,16 +5,16 @@ var passport = require('../config/passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('lol', { title: 'Express' });
+  res.render('index', { user: req.user } );
 });
 
 router.get('/login', function(req, res, next){
-  res.render('lol', {title: 'login'});
+  res.render('login', { user: req.user } );
 });
 
 router.get('/signup', function(req, res, next){
 
-  res.render('lol', {title: 'Signup'});
+  res.render('lol', { user: req.user } );
 });
 
 router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));

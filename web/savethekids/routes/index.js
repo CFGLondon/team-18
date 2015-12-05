@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var passport = require('../config/passport');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('lol', { title: 'Express' });
@@ -19,7 +21,7 @@ router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email'
 
 router.get('/auth/facebook/callback',
   passport.authenticate('facebook', {
-      successRedirect : '/profile',
+      successRedirect : '/users',
       failureRedirect : '/'
   }));
 

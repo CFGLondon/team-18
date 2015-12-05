@@ -482,3 +482,7 @@ body {
 .donateHeader {
     padding-bottom: 8cm;
 }
+
+.centerCol {
+    margin: 0 auto;
+}

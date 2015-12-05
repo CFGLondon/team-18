@@ -33,7 +33,7 @@ router.get('/login', function(req, res, next){
 });
 
 router.get('/signup', function(req, res, next){
-  res.render('index', {title: 'Signup'});
+  res.render('login', {title: ''});
 });
 
 module.exports = router;

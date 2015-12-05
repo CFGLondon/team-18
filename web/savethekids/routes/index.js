@@ -14,13 +14,6 @@ router.get('/login', function(req, res, next){
   res.render('login', { user: req.user } );
 });
 
-<<<<<<< HEAD
-router.get('/matthew', function(req, res, next){
-  res.render('user', { user: req.user } );
-});
-
-=======
->>>>>>> fadd22c525e91dc923c53d4f22c366aec7d59027
 router.get('/signup', function(req, res, next){
   res.render('lol', { user: req.user } );
 });

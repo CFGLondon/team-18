@@ -10,16 +10,10 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/:id', function(req, res, next) {
-  // get user by id
   User.findOne({uid: req.params.id}, function(err, user){
-    if(err){
-      res.render('error', {message: 'user doesnt exist'});
-      res.end();
-    } else {
-      res.render('user', {userdata: user});
-      res.end();
-    }
+    console.log(user.name);
   });
+  res.redirect('/profile');
 });
 
 module.exports = router;

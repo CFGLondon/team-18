@@ -14,15 +14,12 @@ router.get('/login', function(req, res, next){
   res.render('login', { user: req.user } );
 });
 
-<<<<<<< HEAD
-router.get('/matthew', function(req, res, next){
-  res.render('user', { user: req.user } );
+router.get('/signup', function(req, res, next){
+  res.render('register', { user: req.user } );
 });
 
-=======
->>>>>>> fadd22c525e91dc923c53d4f22c366aec7d59027
-router.get('/signup', function(req, res, next){
-  res.render('lol', { user: req.user } );
+router.get('/profile', function(req, res, next){
+  res.render('profile', { user: req.userdata } );
 });
 
 router.get('/dashboard', ensureAuthenticated, function(req,res,next){
@@ -31,15 +28,14 @@ router.get('/dashboard', ensureAuthenticated, function(req,res,next){
 
 router.post('/search', function(req, res, next) {
   User.findOne({name: req.body.search}, function(err, user){
-    res.redirect('/users/'+user.uid);
+    if(!err)
+    if(user) {
+      res.redirect('/users/'+user.uid);
+    }
   });
-  /*
-  console.log(req.body.search);
-  res.render('index', { user: req.user } );
-  */
 });
 
-router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+router.get('/auth/facebook', passport.authenticate('facebook'));
 
 
 router.get('/auth/facebook/callback',

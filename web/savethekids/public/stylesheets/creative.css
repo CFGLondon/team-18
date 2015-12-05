@@ -479,10 +479,17 @@ body {
     webkit-tap-highlight-color: #222;
 }
 
-.donateHeader {
+.header-button {
     padding-bottom: 8cm;
 }
 
 .centerCol {
     margin: 0 auto;
+}
+
+div.img-div{
+    height:50px;
+    width:50px;
+    overflow:hidden;
+    border-radius:50%;
 }

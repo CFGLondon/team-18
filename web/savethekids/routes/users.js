@@ -16,7 +16,7 @@ router.get('/:id', function(req, res, next) {
       res.render('error', {message: 'user doesnt exist'});
       res.end();
     } else {
-      res.render('user', {user: user});
+      res.render('user', {userdata: user});
       res.end();
     }
   });
